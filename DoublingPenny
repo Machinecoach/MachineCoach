@@ -1,0 +1,6 @@
+
+n = int(input("Input what day it is in the month:"))
+double = 0
+for integer in (range(n)):
+    double += 0+(2**integer)
+    print(double)
