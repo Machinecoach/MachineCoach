@@ -1,0 +1,14 @@
+#Name Game - This is a game where you input an all lowercase name and based on a scoring system where 1 = a and 26 = z you get a total score!
+
+name = input("What's your name? ")
+print (name)
+
+lettersum = 0
+
+for letter in name:
+    if letter == ' ':
+        continue
+    else:
+        lettersum += 0+ord(letter)-96
+print (lettersum)
+
