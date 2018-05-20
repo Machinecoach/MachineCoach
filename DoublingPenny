@@ -1,3 +1,5 @@
+#I made this code because my daughter and I read a book called "G is for Googol" which is an ABC book with math topics.  In it they talk about the concept of getting $5,000,000 today or getting a penny that doubles everyday for 30 days. She very much enjoys asking me to input larger and larger numbers to see how long they are when I copy them into notepad.
+
 
 n = int(input("Input what day it is in the month:"))
 double = 0
