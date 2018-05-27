@@ -1,0 +1,16 @@
+#Learning to code
+#PhraseGenerator
+
+import random
+
+verb = ['Leverage', 'Sync', 'Target', 'Gamify', 'Offline', 'Crowd-sourced', '24/7', 'Lean-in', '30,000 food']
+adjective = ['A/B Tested', 'Freemium', 'Hyperlocal', 'Siloed', 'B-to-B', 'Oriented', 'Cloud-based', 'API-Based']
+noun = ['Early Adopter', 'Low Hanging Fruit', 'Pipeline', 'Splash Page', 'Productivity', 'Process', 'Tipping Point', 'Paradigm']
+
+verb = random.choice(verb)
+adjective = random.choice(adjective)
+noun = random.choice(noun)
+
+phrase = verb + ' ' + adjective + ' ' + noun
+
+print(phrase)
