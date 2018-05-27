@@ -1,0 +1,8 @@
+#learning to code
+#int to string conversion exercise
+
+dog_name = input ("What's your dogs name?: ")
+human_age = int(input("How old is " + dog_name + " in human years?: "))
+dog_age = human_age*7
+dog_age = str(dog_age)
+print("Your dog " + dog_name + " is: " + dog_age)
