@@ -1,0 +1,45 @@
+import random
+
+random_choice = random.randint(0,2)
+
+user_choice = input('rock, paper, or scissors?: ')
+
+YourScore = 0
+ComputerScore = 0
+
+if random_choice == 0:
+    print('The Computer chose: rock')
+if random_choice == 1:
+    print('The Computer chose: paper')
+if random_choice == 2:
+    print('The Computer chose: scissors')
+
+if random_choice == 0 and user_choice == 'rock':
+    print('You tied!')
+if random_choice == 1 and user_choice == 'paper':
+    print('You tied!')
+if random_choice == 2 and user_choice == 'scissors':
+    print('You tied!')
+
+if random_choice == 0 and user_choice == 'paper':
+    print('You Win!')
+    YourScore += 1
+if random_choice == 1 and user_choice == 'scissors':
+    print('You Win!')
+    YourScore += 1
+if random_choice == 2 and user_choice == 'rock':
+    print('You Win!')
+    YourScore += 1
+
+if random_choice == 0 and user_choice == 'scissors':
+    print('You Lose! Try Again!')
+    ComputerScore += 1
+if random_choice == 1 and user_choice == 'rock':
+    print('You Lose! Try Again!')
+    ComputerScore += 1
+if random_choice == 2 and user_choice == 'paper':
+    print('You Lose! Try Again!')
+    ComputerScore += 1
+
+print(('Your Score:') + str(YourScore))
+print(('Computer Score:') + str(ComputerScore))
