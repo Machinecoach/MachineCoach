@@ -2,44 +2,43 @@ import random
 
 random_choice = random.randint(0,2)
 
+computerchoice = 0
+
 user_choice = input('rock, paper, or scissors?: ')
+while (user_choice != 'rock' and
+    user_choice != 'paper' and
+    user_choice !=  'scissors'):
+    user_choice = input('rock, paper, or scissors?: ')
+
 
 YourScore = 0
 ComputerScore = 0
 
 if random_choice == 0:
+    computerchoice = 'rock'
     print('The Computer chose: rock')
-if random_choice == 1:
+elif random_choice == 1:
+    computerchoice = 'paper'
     print('The Computer chose: paper')
-if random_choice == 2:
+elif random_choice == 2:
+    computerchoice ='scissors'
     print('The Computer chose: scissors')
 
-if random_choice == 0 and user_choice == 'rock':
+if computerchoice == user_choice:
     print('You tied!')
-if random_choice == 1 and user_choice == 'paper':
-    print('You tied!')
-if random_choice == 2 and user_choice == 'scissors':
-    print('You tied!')
-
-if random_choice == 0 and user_choice == 'paper':
-    print('You Win!')
-    YourScore += 1
-if random_choice == 1 and user_choice == 'scissors':
-    print('You Win!')
-    YourScore += 1
-if random_choice == 2 and user_choice == 'rock':
-    print('You Win!')
-    YourScore += 1
-
-if random_choice == 0 and user_choice == 'scissors':
+elif random_choice == 0 and user_choice == 'scissors':
     print('You Lose! Try Again!')
     ComputerScore += 1
-if random_choice == 1 and user_choice == 'rock':
+elif random_choice == 1 and user_choice == 'rock':
     print('You Lose! Try Again!')
     ComputerScore += 1
-if random_choice == 2 and user_choice == 'paper':
+elif random_choice == 2 and user_choice == 'paper':
     print('You Lose! Try Again!')
     ComputerScore += 1
+else:
+    print('You Win!')
+    YourScore += 1
 
 print(('Your Score:') + str(YourScore))
 print(('Computer Score:') + str(ComputerScore))
+
