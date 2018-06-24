@@ -1,0 +1,16 @@
+full = False
+
+inventory = []
+full_inventory = 50
+
+items = ['sword','gold','potion','shield']
+
+while not full:
+    for item in items:
+        inventory.append(item)
+        size = len(inventory)
+        if (size >= full_inventory):
+            full = True
+
+print('Full with', len(inventory), 'items')
+print(inventory)
