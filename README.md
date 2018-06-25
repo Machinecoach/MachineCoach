@@ -1,4 +1,6 @@
 # MachineCoach
+6/25: Wow looking back at the date of my first post I have learned a TON!  Onto the fun stuff.
+
 5/27: Alexa app needed an api call or some kind of handling of a request and response; checked out book from library to dig into how to do this in python.  In the meantime learning to make random name / sentence generators and int to string conversion.
 
 5/20: Next I'll figure out a simple Alexa app.
