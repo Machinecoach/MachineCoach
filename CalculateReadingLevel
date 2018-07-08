@@ -1,4 +1,3 @@
-import readingleveltext
 
 def count_syllables(words):
     count = 0
@@ -89,4 +88,9 @@ def compute_readinglevel(x):
     print(score, 'reading ease score')
     output_results(score)
 
-compute_readinglevel(readingleveltext.x)
+if __name__ == "__main__":
+    import readingleveltext
+    print('readingleveltext:')
+    compute_readinglevel(readingleveltext.x)
+
+
