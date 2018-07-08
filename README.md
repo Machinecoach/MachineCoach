@@ -1,4 +1,10 @@
 # MachineCoach
+7/8: Wrote a program to analyze reading level, word count, sentence count, syllable count etc. main concepts here were: 
+     1. Split
+     2. Delimiters
+     3. Calling modules
+     4. Main program vs. module programs in python
+
 6/25: Wow looking back at the date of my first post I have learned a TON!  Onto the fun stuff.
 
 5/27: Alexa app needed an api call or some kind of handling of a request and response; checked out book from library to dig into how to do this in python.  In the meantime learning to make random name / sentence generators and int to string conversion.
