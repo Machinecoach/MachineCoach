@@ -1,5 +1,9 @@
 
+"""This module uses the Flesch-Kincaid readability test to analyze text and produce a readability score.
+This score is then converted into grade level."""
+
 def count_syllables(words):
+    """This function provides a total count of all of the syllables in a list."""
     count = 0
 
     for word in words:
@@ -8,6 +12,8 @@ def count_syllables(words):
     return count
 
 def count_syllables_in_word(word):
+    """This function is a heuristic and is not 100% accurate. This checks each word in a list for punctuation,
+    word endings etc. to attempt to get a more accurate count of syllables for the text."""
     count = 0
     endings = '.,;!?:'
     last_char = word[-1]
@@ -36,15 +42,11 @@ def count_syllables_in_word(word):
         else:
             prev_char_was_vowel = False
 
-    #for char in word[len(word)] = 'e':
-     #   count = count - 1
-    #for char in word[len(word)] = 'y':
-     #   count = count + 1
-
-
     return count
 
 def count_sentences(x):
+    """This function counts the number of sentences in a block of text.  It does this by tracking sentence ending
+    punctuation."""
     count = 0
     terminals = '.;?!'
     for char in x:
@@ -53,6 +55,8 @@ def count_sentences(x):
     return count
 
 def output_results(score):
+    """This function reviews the variable score and applies the reading level value based on a range of scores and
+    prints the output"""
     if score >= 90:
         print('5th grade reading level')
     elif score >=80:
@@ -69,6 +73,8 @@ def output_results(score):
         print('Post-graduate grade reading level')
 
 def compute_readinglevel(x):
+    """This function splits each new word in a block of text so they can be counted, executes the above functions,
+    and prints each output."""
     total_words = 0
     total_sentences = 0
     total_syllables = 0
@@ -92,5 +98,3 @@ if __name__ == "__main__":
     import readingleveltext
     print('readingleveltext:')
     compute_readinglevel(readingleveltext.x)
-
-
