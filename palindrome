@@ -1,0 +1,22 @@
+## This module takes a string and deletes all punctuation and spaces.  Then it compares the string forward and backward to and checks if the string is a palindrome.
+def compute_symmetry(x):
+    symmetry = 0
+    for letter in '+=-_][\|()*%~!@#$^*{}:/><,.;?! ':
+        x = x.replace(letter, '')
+
+    print(x)
+    print(x[::-1])
+
+    x = list(x)
+    y = list(x[::-1])
+
+    if x == y:
+        symmetry = 1
+        if symmetry == 1:
+            print('This is a palindrome')
+    else:
+        print('This is not a palindrome')
+
+if __name__ == "__main__":
+    import palindromes
+    compute_symmetry(palindromes.x)
