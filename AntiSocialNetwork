@@ -1,0 +1,17 @@
+#This file imports a py file with a massive dictionary with a list of users.  Each user has a different number of friends and this code sees
+#which friend has the least number of friends.
+
+import hugedictionary
+
+for line in hugedictionary.readlines():
+    max = 3000
+    users = {}
+
+    for name in users:
+        user = users[name]
+        friends = user['friends']
+        if len(friends) < max:
+            most_anti_social = name
+            max = len(friends)
+
+print('The most anti-social user is', most_anti_social)
