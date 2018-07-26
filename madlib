@@ -1,5 +1,5 @@
-import sys
-
+# This opens a madlib file and has the user input various nouns, verbs or adjectives.  Once all inputs are recieved, 
+# the program writes a new txt document and saves it as crazy_lib.txt which replaces the placeholder words in the madlib.
 def make_crazy_lib(filename):
     try:
         file = open(filename, 'r')
