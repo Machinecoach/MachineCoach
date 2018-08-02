@@ -1,8 +1,10 @@
-
+#Doubles every number in range from 0-9
 print([x + x for x in range(10)])
 
+#prints first char of each lyric
 lyric = ['I', 'saw', 'heard', 'on', 'you', 'the', 'wireless', 'back', 'in', '52']
 print([s[0] for s in lyric])
 
+#prints first char of each lyric if the letter comes after m in the alphabet
 var = [s[0] for s in lyric if s[0] > 'm']
 print(var)
