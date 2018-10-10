@@ -1,4 +1,3 @@
-from tkinter import Tk, Canvas
 import requests, turtle, json
 
 iss = turtle.Turtle()
@@ -6,15 +5,11 @@ iss = turtle.Turtle()
 def setup(window):
     global iss
 
-    root = Tk()
-    c = Canvas(root, width=1000, height=500)
-    c.pack()
-
-    #window.setup(1000,500)
-    #window.bgcolor('blue')
-    c.setworldcoordinates(-180, -90, 180, 90)
-    #turtle.register_shape()
-    iss.shape("turtle")
+    window.setup(1000,500)
+    window.bgpic('images.gif')
+    window.setworldcoordinates(-180, -90, 180, 90)
+    turtle.register_shape('Bowser.gif')
+    iss.shape('Bowser.gif')
 
 def move_iss(lat, long):
     global iss
@@ -30,8 +25,8 @@ def track_iss():
     if(response.status_code == 200):
         response_dictionary = json.loads(response.text)
         position = response_dictionary['iss_position']
-        #print('International Space Station at ' +
-        #     position['latitude'] + ', ' + position['longitude'])
+        print('International Space Station at ' +
+             position['latitude'] + ', ' + position['longitude'])
         lat = float(position['latitude'])
         long = float(position['longitude'])
         move_iss(lat, long)
