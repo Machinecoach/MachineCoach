@@ -1,0 +1,4 @@
+# This allows you to print the documentations of various python APIs without leaving terminal
+print(map.__doc__)
+import collections
+print(collections.__doc__)
