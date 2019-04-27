@@ -1,0 +1,25 @@
+#def function with variable list of parameters utilizing *
+
+#args is not required below, but it is a python norm and other devs understand it
+def addition(*args):
+    result = 0
+    for arg in args:
+        result += arg
+    return result
+
+#Drawback:  if you change a variable argument in a function you have to change all of the places where function is used.
+#example of this drawback would be if I added a variable and a comma in front of *args above
+#useful when number of parameters is small
+
+#TODO: define a function that takes variable arguments
+def main():
+    # TODO: pass different arguments
+    print(addition(5, 10, 15, 20))
+    print(addition(1, 2, 3))
+
+    #TODO: pass an existing list
+    myNums = [5, 10, 15, 20]
+    print(addition(*myNums))
+
+if __name__ == "__main__":
+    main()
