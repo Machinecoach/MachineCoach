@@ -95,6 +95,6 @@ def compute_readinglevel(x):
     output_results(score)
 
 if __name__ == "__main__":
-    import readingleveltext
+    readingleveltext = input()
     print('readingleveltext:')
-    compute_readinglevel(readingleveltext.x)
+    compute_readinglevel(readingleveltext)
