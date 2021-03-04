@@ -1,0 +1,80 @@
+#include <cs50.h>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    long credit_card_number;
+    long user_input;
+    int digits = 1;
+    char str[17]= "";
+
+    do
+    {
+        credit_card_number = trunc(get_long("Number: "));
+        //create a variable to store the users input
+        user_input = credit_card_number;
+        //divide by 10 in order to determine the number of digits
+        while (credit_card_number>=10)
+        {
+            credit_card_number = credit_card_number/10;
+            digits++;
+        }
+
+    }
+    while (((credit_card_number <= 4000000000000) || (credit_card_number >= 5599999999999999)) && ((digits < 13) || (digits > 17)));
+
+
+    int count = digits;
+    int sum = 0;
+
+    for (int i = 1; i <= count; i++)
+    {
+        int luhn_calc = user_input%10;
+
+        if (i % 2 == 0)
+        {
+            luhn_calc *= 2;
+
+            if (luhn_calc > 9)
+            {
+                luhn_calc -= 9;
+            }
+        }
+        sum = sum+luhn_calc;
+        user_input = user_input/10;
+    }
+
+    int output = sum%10;
+    printf("%i\n", output);
+
+    int provider;
+    int provider2;
+
+    long a = (powl(10, (digits-2)));
+
+    provider = trunc(user_input / a);
+    provider2 = provider/10;
+
+
+    if ((provider > 50 && provider < 56 && digits == 16) && (output == 0))
+    {
+        printf("MASTERCARD\n") ;
+    }
+    else if ((provider2 == 4) && (digits == 13 || digits == 16) && (output == 0))
+    {
+        printf("VISA\n") ;
+    }
+    else if ((provider == 34 || provider == 37) && (digits == 15) && (output == 0))
+    {
+        printf("AMEX\n") ;
+    }
+    else
+    {
+        printf("INVALID\n") ;
+    }
+    return 0 ;
+
+}
